@@ -1,12 +1,12 @@
 ---
-const date = new Date();
-const formatter = new Intl.DateTimeFormat('en-US', {
+const date: Date = new Date();
+const formatter: Intl.DateTimeFormat = new Intl.DateTimeFormat('en-US', {
   timeZone: 'Europe/Madrid',
   hour: '2-digit',
   minute: '2-digit',
   hour12: false, 
 });
-const currentDate = formatter.format(date);
+const currentDate: string = formatter.format(date);
 ---
 <div class="max-w-96">
     <div>
@@ -21,7 +21,7 @@ const currentDate = formatter.format(date);
         <a class="bg-gray-800 py-1 w-full block text-center border rounded-md border-gray-500 hover:bg-gray-500 transition-colors duration-300" href="">Follow</a>
         
         <ul class="[&>li>span]:text-gray-500 [&>li]:my-1">
-            <li class="py-4">99 <span>followers | </span> 99 <span>folliwing</span></li>
+            <li class="py-4">99999 <span>followers | </span>99999<span> folliwing</span></li>
             <li>Universidad de Sevilla</li>
             <li>Seville, Spain</li>
             <li>{currentDate} <span>(UTC +01:00)</span> </li>
