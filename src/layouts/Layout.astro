@@ -1,14 +1,25 @@
+---
+import Header from "../components/Header.astro";
+import Profile from "../components/Profile.astro";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image" href="/favicon.ico" />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+
 		<title>javsanmar5</title>
 	</head>
 	<body>
-		<slot />
+		<Header />
+		<main class="mx-72 flex">
+			<Profile />
+			<slot /> 
+		</main>
 	</body>
 </html>
 
