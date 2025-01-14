@@ -1,0 +1,51 @@
+---
+const date = new Date();
+const formatter = new Intl.DateTimeFormat('en-US', {
+  timeZone: 'Europe/Madrid',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false, 
+});
+const currentDate = formatter.format(date);
+---
+<div class="max-w-96">
+    <div>
+        <a href="https://github.com/javsanmar5">
+            <img class="border-gray-500 hover:scale-110 transition-transform duration-300" src="/yellow-sphere.png" alt="">
+        </a>
+    </div>
+    <div class="mx-12">
+        <h2 class="text-3xl">Javier Santos</h2>
+        <h4 class="text-gray-400">javsanmar5</h4>
+        <p class="py-4">Software engineer | I know some web tools, I'd rather code algorithms tho | Any critique/PRs are greatly appreciated!</p>
+        <a class="bg-gray-800 py-1 w-full block text-center border rounded-md border-gray-500 hover:bg-gray-500 transition-colors duration-300" href="">Follow</a>
+        
+        <ul class="[&>li>span]:text-gray-500 [&>li]:my-1">
+            <li class="py-4">99 <span>followers | </span> 99 <span>folliwing</span></li>
+            <li>Universidad de Sevilla</li>
+            <li>Seville, Spain</li>
+            <li>{currentDate} <span>(UTC +01:00)</span> </li>
+            <li class="hover:text-blue-500 hover:underline"><a href="mailto:javier.jsm21@gmail.com">javier.jsm21@gmail.com</a></li>
+            <li class="hover:text-blue-500 hover:underline"><a href="https://www.x.com/javsanDEV">@javsanDEV</a></li>
+            <li class="hover:text-blue-500 hover:underline"><a href="https://www.x.com/javierrsantoss">@javierrsantos</a></li>
+            <li class="hover:text-blue-500 hover:underline"><a href="https://www.instagram.com/javierrsantoss">@javierrsantoss</a></li>
+        </ul>
+        <div class="my-6 py-4 border-t border-gray-500">
+            <h3 class="font-bold">Achievements</h3>
+            <div class="flex py-2">
+                <img class="w-1/4 " src="/achievement1.png" alt="Achievement 1">
+                <img class="w-1/4 " src="/achievement2.png" alt="Achievement 2">
+                <img class="w-1/4 " src="/achievement3.png" alt="Achievement 3">
+            </div>
+        </div>
+        <div class="my-6 py-4 border-t border-gray-500">
+            <h3 class="font-bold">Highlights</h3>
+            <div class="flex items-center my-2">
+                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star fill-gray-500 color-fg-muted">
+                    <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+                </svg>
+                <p class="text-purple-800 font-bold border rounded-2xl border-purple-500  px-2 mx-2">PRO</p>
+            </div>
+        </div>
+    </div>
+</div>

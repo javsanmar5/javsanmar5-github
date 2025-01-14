@@ -1,7 +1,17 @@
 ---
+import Header from '../components/Header.astro';
+import Profile from '../components/Profile.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<main>javsanmar5</main>
+	<header class="bg-black w-full h-24 border-b border-gray-500">
+		<Header />
+	</header>
+	<main class="border border-white mx-72 flex">
+		<Profile />
+		<section>
+			SECTIONS
+		</section>
+	</main>
 </Layout>
