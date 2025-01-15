@@ -1,0 +1,55 @@
+---
+interface Contribution {
+  date: string;
+  count: number;
+}
+
+const generateContributions = (): Contribution[] => {
+  const startDate: Date = new Date('2025-01-01');
+  const contributions: Contribution[] = [];
+  
+  for (let i = 0; i < 365; i++) {
+    const date: Date = new Date(startDate.getTime() + i * 24 * 60 * 60 * 1000);
+    const count: number = Math.random() > 0.3 ? Math.floor(Math.random() * 20) + 1 : 0;
+    contributions.push({ date: date.toISOString().slice(0, 10), count });
+  }
+  return contributions;
+};
+
+const contributions: Contribution[] = generateContributions();
+
+const days = Array.from({ length: 365 }, (_, i) => {
+  const date: Date = new Date(new Date('2025-01-01').getTime() + i * 24 * 60 * 60 * 1000);
+  const contribution = contributions.find(c => c.date === date.toISOString().slice(0, 10)) || { count: 0 };
+  return { date, count: contribution.count };
+});
+
+---
+
+<div>
+    <p class="text-lg font-bold mt-10 mb-2">99999 contributions this year</p>
+    <div class="border border-gray-500 rounded-sm p-3 ">
+        <div class="flex justify-between w-full">
+            <span class="flex-1 text-center">Jan</span>
+            <span class="flex-1 text-center">Feb</span>
+            <span class="flex-1 text-center">Mar</span>
+            <span class="flex-1 text-center">Apr</span>
+            <span class="flex-1 text-center">May</span>
+            <span class="flex-1 text-center">Jun</span>
+            <span class="flex-1 text-center">Jul</span>
+            <span class="flex-1 text-center">Aug</span>
+            <span class="flex-1 text-center">Sep</span>
+            <span class="flex-1 text-center">Oct</span>
+            <span class="flex-1 text-center">Nov</span>
+            <span class="flex-1 text-center">Dec</span>
+        </div>
+        <div class="flex flex-wrap gap-1">
+            {days.map(({ date, count }) => (
+                <div
+                class={`w-3 h-3 rounded-sm ${count === 0 ? 'bg-gray-800' : count < 10 ? 'bg-green-800' : 'bg-green-500'}`}
+                title={`${count} contributions on ${date.toDateString()}`}
+                ></div>
+            ))}
+        </div>
+    </div>
+</div>
