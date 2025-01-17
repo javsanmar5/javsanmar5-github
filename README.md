@@ -1,4 +1,4 @@
-# Personal Portfolio - Javsanmar5
+# Personal Portfolio - javsanmar5
 
 ## Overview
 
