@@ -1,0 +1,13 @@
+---
+const { title, description, techStack, license, slug } = Astro.props;
+---
+<div class="border-t border-b border-gray-500 py-6 my-4">
+	<a class="text-lg font-bold text-blue-500" href={`https://github.com/javsanmar5/${slug}`}>{title}</a>
+	<p class="text-sm text-gray-500">{description}</p>
+	<ul>
+		{techStack.map((tech: string, index: number) => (
+			<li class="inline-block bg-gray-700 text-white px-2 py-1 rounded-md text-xs mr-2 my-3">{tech}</li>
+		))}
+	</ul>
+	<p class="text-sm text-gray-500">{license}</p>
+</div>

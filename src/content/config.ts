@@ -8,3 +8,5 @@ const repositories = defineCollection({
         license: z.string(),
     })
 });
+
+export default repositories;
