@@ -2,7 +2,7 @@
 const { title, description, techStack, license, slug } = Astro.props;
 ---
 <div class="border-b border-gray-500 py-6">
-	<a class="text-lg font-bold text-blue-500" href={`https://github.com/javsanmar5/${slug}`}>{title}</a>
+	<a class="text-lg font-bold text-blue-500 hover:underline" href={`https://github.com/javsanmar5/${slug}`}>{title}</a>
 	<p class="text-sm text-gray-500">{description}</p>
 	<ul>
 		{techStack.map((tech: string, index: number) => (
