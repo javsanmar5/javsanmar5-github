@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 const repositories = await getCollection('repositories');
+import colorMap from '../assets/colorMap';
 ---
 <div>
     <p class="text-lg font-bold mt-10 mb-2">Pinned</p>
@@ -18,8 +19,9 @@ const repositories = await getCollection('repositories');
                 <p class="text-sm">{description}</p>
                 <div class="flex flex-wrap gap-2">
                     {techStack.map((tech, index) => {
+                        const bgColor = colorMap[tech] || 'bg-gray-500'
                         return(
-                            <span class="text-xs px-2 py-1 bg-gray-700 text-white rounded-md">{tech}</span>
+                            <span class={`${bgColor} text-xs px-2 py-1 text-white rounded-md`}>{tech}</span>
                         );
                     })}
                 </div>
