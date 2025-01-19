@@ -7,7 +7,7 @@ import colorMap from '../assets/colorMap';
     <p class="text-lg font-bold mt-10 mb-2">Pinned</p>
     <div class="grid grid-cols-2 gap-4">
         {repositories.map((repository, index) => {
-            const { slug, data } = repository;
+			const { slug, data } = repository as typeof repository & { slug: string };
             const { title, description, techStack, license, repositoryOwner } = data;
             
             return(

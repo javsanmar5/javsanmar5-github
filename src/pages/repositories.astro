@@ -18,7 +18,7 @@ const repositories = await getCollection('repositories');
 
 		<div>
 		{repositories.map((repository, index) => {
-			const { slug, data } = repository;
+			const { slug, data } = repository as typeof repository & { slug: string };
 			const { title, description, techStack, license, repositoryOwner} = data;
 			
 			return(
