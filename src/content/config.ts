@@ -6,6 +6,7 @@ const repositories = defineCollection({
         description: z.string(),
         techStack: z.array(z.string()),
         license: z.string(),
+        repositoryOwner: z.string(),
     })
 });
 
