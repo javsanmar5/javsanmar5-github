@@ -19,10 +19,10 @@ const repositories = await getCollection('repositories');
 		<div>
 		{repositories.map((repository, index) => {
 			const { slug, data } = repository;
-			const { title, description, techStack, license } = data;
+			const { title, description, techStack, license, repositoryOwner} = data;
 			
 			return(
-				<Repository title={title} description={description} techStack={techStack} license={license} slug={slug} />
+				<Repository title={title} description={description} techStack={techStack} license={license} repositoryOwner={repositoryOwner} slug={slug} />
 			);
 		})}
 		</div>
