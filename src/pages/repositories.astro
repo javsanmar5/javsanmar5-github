@@ -8,12 +8,11 @@ const repositories = await getCollection('repositories');
 
 <Layout>
 	<div class="md:max-w-[50vw] md:w-3/4 px-8 my-8">
-		<div class="flex w-full gap-3 pb-6 border-b border-gray-500">
+		<div class="flex flex-wrap w-full gap-3 pb-6 border-b border-gray-500">
 			<input class="flex-grow text-sm px-3 py-1 bg-transparent border border-gray-500 rounded-md" placeholder="Find a repository..." ="text">
 			<button class="text-sm px-3 py-1 bg-gray-700 border border-gray-500 rounded-md">Type</button>
 			<button class="text-sm px-3 py-1 bg-gray-700 border border-gray-500 rounded-md">Language</button>
 			<button class="text-sm px-3 py-1 bg-gray-700 border border-gray-500 rounded-md">Sort</button>
-			<button class="text-sm px-3 py-1 bg-green-600 border border-green-600 rounded-md">New</button>
 		</div>
 
 		<div>
